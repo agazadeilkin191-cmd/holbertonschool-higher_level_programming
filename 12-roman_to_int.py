@@ -1,6 +1,8 @@
 #!/usr/bin/python3
+""" Roman to Integer module """
 def roman_to_int(roman_string):
     if not isinstance(roman_string, str) or roman_string is None:
+    """ Converts a Roman numeral to an integer """
         return 0
     roman_dict = {
             'I': 1,
