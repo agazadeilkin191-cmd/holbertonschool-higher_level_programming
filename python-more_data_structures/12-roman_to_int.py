@@ -13,7 +13,8 @@ def roman_to_int(roman_string):
 
     for i in range(length):
         current_val = roman_map.get(roman_string[i], 0)
-        next_val = roman_map.get(roman_string[i + 1], 0) if i + 1 < length else 0
+        next_val = roman_map.get(roman_string[i + 1], 0)
+        if i + 1 < length else 0
 
         if current_val < next_val:
             total -= current_val
