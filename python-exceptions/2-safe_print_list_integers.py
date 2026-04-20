@@ -3,15 +3,8 @@
 
 
 def safe_print_list_integers(my_list=[], x=0):
-    """Prints the first x elements of a list that are integers.
+    """Prints the first x elements of a list that are integers."""
 
-    Args:
-        my_list (list): The list to process.
-        x (int): The number of elements to check.
-
-    Returns:
-        int: The number of integers successfully printed.
-    """
     count = 0
     for i in range(x):
         try:
@@ -19,5 +12,5 @@ def safe_print_list_integers(my_list=[], x=0):
             count += 1
         except (ValueError, TypeError)
             continue
-    print()
-    return count
+print()
+return count
