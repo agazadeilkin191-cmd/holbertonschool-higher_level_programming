@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""Module that
 def safe_print_list_integers(my_list=[], x=0):
     count = 0
     for i in range(x):
@@ -7,7 +8,5 @@ def safe_print_list_integers(my_list=[], x=0):
                count += 1
         except (ValueError, TypeError):
              continue
-        except IndexError:
-             break
     print()
     return count
