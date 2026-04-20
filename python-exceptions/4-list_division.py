@@ -7,8 +7,7 @@ def list_division(my_list_1, my_list_2, list_length):
             if i >= len(my_list_1) or i >= len(my_list_2):
                 print("out of range")
                 div = 0
-            elif not isinstance(my_list_1[i], (int, float)) or
-                   not isinstance(my_list_2[i], (int, float))):
+            elif not isinstance(my_list_1[i], (int, float)) or not isinstance(my_list_2[i], (int, float))):
                 print("wrong type")
                 div = 0
             else:
