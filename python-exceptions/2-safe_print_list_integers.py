@@ -7,6 +7,7 @@ def safe_print_list_integers(my_list=[], x=0):
 
     Args:
         my_list (list): The list to process.
+        x (int): The number of elements to check.
 
     Returns:
         int: The number of integers successfully printed.
