@@ -6,7 +6,7 @@ Defines an integer addition function.
 def add_integer(a, b=98):
     """Returns the addition of a and b.
 
-    Float arguments arer typecasted to integers before addition is performed.
+    Float arguments are typecasted to integers before addition is performed.
     Raises:
         TypeError: If a or b is not an integer or float.
     """
