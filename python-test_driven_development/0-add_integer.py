@@ -6,17 +6,17 @@ Module that provides the add_integer function.
 
 def add_integer(a, b=98):
     """
-    Adds two integers.
+    Adds two integers or floats and returns the result as an integer.
 
     Args:
-        a: first integer or float.
-        b: second integer or float.
+        a: First number (int or float).
+        b: Second number (int or float), defaults to 98.
 
     Returns:
         The sum of a and b as an integer.
 
     Raises:
-        TypeError: if a or b are not integers or floats.
+        TypeError: If a or b is not an integer or float.
     """
     if not isinstance(a, (int, float)):
         raise TypeError("a must be an integer")
@@ -29,7 +29,7 @@ def add_integer(a, b=98):
     if isinstance(b, float) and b != b:
         raise TypeError("b must be an integer")
 
-    # Cast to integer and handle OverflowError (e.g., float('inf'))
+    # Cast to integer, handling potential overflow for infinity
     try:
         a = int(a)
     except (OverflowError, ValueError):
