@@ -1,0 +1,16 @@
+>>> print_diag = __import__('5-print_diag').print_diag
+>>> print_diag(4)
+#
+ #
+  #
+   #
+>>> print_diag(2)
+#
+ #
+>>> print_diag(0)
+<BLANKLINE>
+>>> try:
+...     print_diag("not int")
+... except Exception as e:
+...     print(e)
+size must be an integer
