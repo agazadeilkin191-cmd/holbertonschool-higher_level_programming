@@ -1,12 +1,12 @@
 #!/usr/bin/python3
 """
-3-say_my_name modulu
+Module 3-say_my_name
 """
 
 
 def say_my_name(first_name, last_name=""):
     """
-    first_name və last_name çap edən funksiya
+    Function that prints My name is <first name> <last name>
     """
     if not isinstance(first_name, str):
         raise TypeError("first_name must be a string")
