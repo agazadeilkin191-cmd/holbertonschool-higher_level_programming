@@ -14,8 +14,7 @@ def text_indentation(text):
         if flag == 0:
             if char == ' ':
                 continue
-            else:
-                flag = 1
+            flag = 1
 
         print(char, end="")
 
