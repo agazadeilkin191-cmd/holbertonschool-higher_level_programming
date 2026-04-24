@@ -10,3 +10,8 @@ My name is Bob
 ... except Exception as e:
 ...     print(e)
 first_name must be a string
+>>> try:
+...     say_my_name("John", 12)
+... except Exception as e:
+...     print(e)
+last_name must be a string

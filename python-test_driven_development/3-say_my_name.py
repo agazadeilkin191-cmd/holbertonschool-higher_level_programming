@@ -3,6 +3,7 @@
 3-say_my_name modulu
 """
 
+
 def say_my_name(first_name, last_name=""):
     """
     first_name və last_name çap edən funksiya
