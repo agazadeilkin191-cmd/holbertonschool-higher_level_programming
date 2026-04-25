@@ -25,5 +25,8 @@ class MyList(list):
         >>> my_list.append(-1)
         >>> my_list.print_sorted()
         [-1, 1, 2, 3, 4, 5]
+        >>> my_list = MyList()
+        >>> my_list.print_sorted()
+        []
         """
         print(sorted(self))
