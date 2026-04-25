@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
 Module 1-my_list
-Contains class MyList
+Contains class MyList that inherits from list
 """
 
 
