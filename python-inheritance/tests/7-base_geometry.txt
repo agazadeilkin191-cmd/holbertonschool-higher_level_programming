@@ -1,0 +1,3 @@
+BaseGeometry
+- area: raises an Exception with the message area() is not implemented
+- integer_validator: validates a parameter as an integer
