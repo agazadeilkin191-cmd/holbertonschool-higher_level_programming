@@ -26,6 +26,8 @@ class Circle(Shape):
     Concrete class representing a circle.
     """
     def __init__(self, radius):
+        if radius < 0:
+            raise ValueError("Radius must be non-negative")
         self.radius = radius
 
     def area(self):
@@ -40,6 +42,8 @@ class Rectangle(Shape):
     Concrete class representing a rectangle.
     """
     def __init__(self, width, height):
+        if width < 0 or height < 0:
+            raise ValueError("Width and height must be non-negative")
         self.width = width
         self.height = height
 
@@ -53,7 +57,6 @@ class Rectangle(Shape):
 def shape_info(obj):
     """
     Function that demonstrates duck typing.
-    It doesn't check the type of 'obj', but assumes it has area and perimeter.
     """
     print(f"Area: {obj.area()}")
     print(f"Perimeter: {obj.perimeter()}")
