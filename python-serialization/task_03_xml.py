@@ -1,15 +1,20 @@
-import csv
-import json
+import xml.etree.ElementTree as ET
 
-def convert_csv_to_json(filename):
-    try:
-        with open(filename, 'r', encoding='utf-8') as csv_file:
-            reader = csv.DictReader(csv_file)
-            data = list(reader)
+def serialize_to_xml(dictionary, filename):
+    root = ET.Element("data")
+    for key, value in dictionary.items():
+        child = ET.SubElement(root, key)
+        child.text = str(value)
+    
+    tree = ET.ElementTree(root)
+    tree.write(filename, encoding='utf-8', xml_declaration=False)
 
-        with open('data.json', 'w', encoding='utf-8') as json_file:
-            json.dump(data, json_file, indent=4)
-
-        return True
-    except (FileNotFoundError, Exception):
-        return False
+def deserialize_from_xml(filename):
+    tree = ET.parse(filename)
+    root = tree.getroot()
+    
+    result = {}
+    for child in root:
+        result[child.tag] = child.text
+        
+    return result
