@@ -1,12 +1,12 @@
 #!/usr/bin/python3
 """
-Module that defines a Student class
+10-student module
 """
 
 
 class Student:
     """
-    Class that defines a student
+    Student class
     """
     def __init__(self, first_name, last_name, age):
         """
@@ -21,5 +21,9 @@ class Student:
         Retrieves a dictionary representation of a Student instance
         """
         if isinstance(attrs, list):
-            return {key: getattr(self, key) for key in attrs if hasattr(self, key)}
+            return {
+                key: getattr(self, key)
+                for key in attrs
+                if hasattr(self, key)
+            }
         return self.__dict__
