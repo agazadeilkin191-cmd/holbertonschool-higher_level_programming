@@ -16,15 +16,13 @@ if __name__ == "__main__":
     )
     cursor = db.cursor()
     query = (
-        "SELECT cities.id, cities.name, states.name "
-        "FROM cities "
+        "SELECT cities.name FROM cities "
         "JOIN states ON cities.state_id = states.id "
         "WHERE states.name LIKE BINARY %s "
         "ORDER BY cities.id ASC"
     )
     cursor.execute(query, (sys.argv[4],))
     rows = cursor.fetchall()
-    for row in rows:
-        print(row)
+    print(", ".join([row[0] for row in rows]))
     cursor.close()
     db.close()
