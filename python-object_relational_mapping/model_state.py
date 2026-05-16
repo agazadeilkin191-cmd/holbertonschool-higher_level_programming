@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-This module defines a State class and an instance Base.
+This module defines a State class and an instance Base = declarative_base().
 """
 from sqlalchemy import Column, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
