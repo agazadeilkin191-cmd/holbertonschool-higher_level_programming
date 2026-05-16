@@ -15,17 +15,17 @@ if __name__ == "__main__":
         ),
         pool_pre_ping=True
     )
-    
+
     # Create a configured "Session" class and instantiate it
     Session = sessionmaker(bind=engine)
     session = Session()
-    
+
     # Query all State objects and sort them by states.id in ascending order
     states = session.query(State).order_by(State.id).all()
-    
+
     # Display results in the required format
     for state in states:
         print("{}: {}".format(state.id, state.name))
-        
+
     # Close the session
     session.close()
