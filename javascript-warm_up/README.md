@@ -1,1 +1,1 @@
-JavaScript is amazing script
+JavaScript is amazing
