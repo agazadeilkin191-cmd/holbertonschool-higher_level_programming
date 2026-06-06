@@ -2,11 +2,11 @@ import sqlite3
 import os
 
 def create_database():
-    # 1. Əgər fayl artıq varsa və korlanıbsa, onu silirik
+    # 1. Mövcud faylı silirik ki, yeni və təmiz baza yaradılsın
     if os.path.exists('products.db'):
         os.remove('products.db')
         
-    # 2. Yeni bazanı yaradırıq
+    # 2. Bazaya qoşuluruq
     conn = sqlite3.connect('products.db')
     cursor = conn.cursor()
     
@@ -30,7 +30,6 @@ def create_database():
     
     conn.commit()
     conn.close()
-    print("Database created successfully.")
 
 if __name__ == '__main__':
     create_database()
